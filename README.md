@@ -75,6 +75,15 @@ chmod +x scripts/e2e-ci.sh
 ./scripts/e2e-ci.sh
 ```
 
+## Deployable Package
+A command has been included that allows you to package up the application into a deployable artifact (tarball). To do this, from the root directory, enter the following command:
+
+```
+make pack
+```
+This command will pack the application into a tar and copy it into the `ansible/files` folder that can be used by ansible to deploy to a target machine. 
+
+
 ## Terraform
 ### Bootstrap
 A set of bootstrap templates have been provided that will provision a DynamoDB Table, S3 Bucket & Option Group for DocumentDB in AWS. To set these up, ensure your AWS Programmatic credentials are set in your console and execute the following command from the root directory
