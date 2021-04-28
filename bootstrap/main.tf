@@ -1,5 +1,4 @@
 provider "aws" {
-  version = "~> 2.23"
   region  = "us-east-1"
 }
 
@@ -31,7 +30,7 @@ resource "aws_dynamodb_table" "terraform_statelock" {
 }
 
 resource "aws_docdb_cluster_parameter_group" "tlsdisable" {
-  family      = "docdb3.6"
+  family      = "docdb4.0"
   name        = "tls-disable"
   description = "docdb cluster parameter group dissable tls"
 
